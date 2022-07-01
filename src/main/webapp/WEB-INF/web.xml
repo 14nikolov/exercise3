@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>exercise3</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Specifying Web Fragments Ordering -->
+  <absolute-ordering/>
+  
+  <!-- Creating a Dispatcher Servlet -->
+  <servlet>
+  	<!--  Giving the Dispatcher Servlet a name -->
+  	<servlet-name>MyServlet</servlet-name>
+  	<!-- Using Spring's ready-made DispatcherServlet -->
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<!-- Passing the Web Container, as an initialization parameter,
+  	 to the Dispatcher Servlet, because it requires it, in order to function -->
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/webapp-container-servlet.xml</param-value>
+  	</init-param>
+  	<!-- Loads the Dispatcher Servlet on server startup -->
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <!-- Defining which URLs are going to be handled by 
+  the "MyServlet" dispatcher servlet -->
+  <servlet-mapping>
+  	<servlet-name>MyServlet</servlet-name>
+  	<!-- "/" means that this Dispatcher Servlet will handle all the HTTP(URL) Requests -->
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
