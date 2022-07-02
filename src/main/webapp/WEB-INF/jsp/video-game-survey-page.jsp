@@ -23,6 +23,15 @@
 <title>Video Game Survey</title>
 </head>
 <body>
+	<!-- a Variable containing the Context Path of our Web Application
+	we can reference the value of this variable in the whole page,
+	using ${root}
+	Context Path means the root of your Web App, 
+	in our case that would be http://localhost:8080/MyWebApp/ 
+	THIS IS VERY IMPORTANT, BECAUSE WE DO NOT WANT TO HARDCORE ANY RELATIVE URLS,
+	imagine the Context Path / Root of our Web Application changes, if we use ABSOLUTE URLS,
+	it would be a disaster to fix-->
+	<c:set var="root" value="${pageContext.request.contextPath}"/>
 	
 	<h2>Video Game Survey</h2>
 	
@@ -30,7 +39,7 @@
 	<!-- Creating a Spring MVC Form -->
 		<!-- "action" attribute - specifies where to send the form-data, when a form is submitted. -->
 		<!-- "modelAttribute" - allows us to get the submitted form data and bind it to a specific Object (Data Binding) -->
-	<form:form action="video-game-survey-results-page" modelAttribute="videoGameSurveyObject">
+	<form:form action="${root}/surveys/video-game-survey/video-game-survey-results" modelAttribute="videoGameSurveyObject">
 		<!-- Creating Spring MVC Form Check-Boxes -->
 			<!-- "form:checkboxes" vs "form:checkbox" tag
 				"form:checkboxes" (allows us to store multiple check-box items at once, by reading Object from Array/Collection/Map.

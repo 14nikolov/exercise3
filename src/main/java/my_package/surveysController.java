@@ -22,12 +22,12 @@ public class surveysController {
 		// Now it can give the file path to the Dispatcher Servlet, 
 		// after which the Dispatcher Servlet will get the View Page and
 		// return it as a HTTP Response to the Client, who made the HTTP(URL) Request.
-	@RequestMapping("/surveys")
+	@RequestMapping("surveys")
 	public String getShopPage() {
 		return "surveys-page";
 	}
 	
-	@RequestMapping("/surveys/video-game-survey")
+	@RequestMapping("surveys/video-game-survey")
 	// Adding a Model, which will be passed to the View Page "video-game-survey-page"
 	public String getShopGamesPage(Model model) {
 		// Adding an Object to the Model. 
@@ -37,7 +37,7 @@ public class surveysController {
 		return "video-game-survey-page";
 	}
 	
-	@RequestMapping("/surveys/video-game-survey/video-game-survey-results")
+	@RequestMapping("surveys/video-game-survey/video-game-survey-results")
 	public String getVideoGameSurveyResultsPage
 	// Checking whether or not, the Model Attribute's Validation Requirements are met
 		// The Validation Requirements are given in the Object's class, via Validation Annotations 
@@ -50,9 +50,9 @@ public class surveysController {
 		// If there are errors during the Validation, it will return "true",
 		// if there are no errors it will return "false" 
 	(@Valid @ModelAttribute("videoGameSurveyObject") VideoGameSurveyObject theVideoGameSurveyObject,
-			BindingResult bindingResult) 
+			BindingResult theBindingResult) 
 	{
-		if(bindingResult.hasErrors()==true) {
+		if(theBindingResult.hasErrors()) {
 			return "video-game-survey-page";
 		}else {
 			return "video-game-survey-results-page";

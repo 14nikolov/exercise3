@@ -20,6 +20,7 @@ Web Application Container -->
 	 (and setting some important defaults for our Web Application)  -->
 	 <!-- The Handler Mapper and Handler Adapter help the Dispatcher Servlet to 
 	 find which Controller, it should call, based on the requested URL -->
+	 <!-- Also adds support for conversion, formatting and validation support -->
 	 <mvc:annotation-driven/>
 	 
 	 <!-- Enabling Spring's Annotation Component Scanning Feature -->
