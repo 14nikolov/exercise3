@@ -23,13 +23,13 @@ public class surveysController {
 		// after which the Dispatcher Servlet will get the View Page and
 		// return it as a HTTP Response to the Client, who made the HTTP(URL) Request.
 	@RequestMapping("surveys")
-	public String getShopPage() {
+	public String getSurveysPage() {
 		return "surveys-page";
 	}
 	
 	@RequestMapping("surveys/video-game-survey")
 	// Adding a Model, which will be passed to the View Page "video-game-survey-page"
-	public String getShopGamesPage(Model model) {
+	public String getVideoGameSurveyPage(Model model) {
 		// Adding an Object to the Model. 
 		// That Object will be carried by the model, to the View Page "video-game-survey-page". 
 		// After that we can work with the Model's Object, inside the View Page.

@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<!-- When a user opens this page, he will see this written on his web browser's Tab  -->
-<title>Home Page</title>
+	<meta charset="UTF-8">
+	<!-- When a user opens this page, he will see this written on his web browser's Tab  -->
+	<title>Home Page</title>
 </head>
 <body>
 	<h1>Welcome to the Home page!</h1>
