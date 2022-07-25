@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- Adding all the required XML Namespaces and Schema Locations for our
+<!-- This file is the Spring Web Container of our Web Application,
+it's also an initialization parameter to our deployment descriptor  -->
+<!-- Adding all the required XML Name-spaces and Schema Locations for our
 Web Application Container -->
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
