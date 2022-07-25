@@ -8,7 +8,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
 <!-- Including the JSTL Library Tag (requires "jstl-1.2.jar"), 
 	 This will allow us to perform loops and if statements in the ".jsp" file 
-	 	Take a good look at the (prefix="c"), this is very simillar to how
+	 	Take a good look at the (prefix="c"), this is very similar to how
 		XML Namespaces and XML Schema Locations work. 
 		In order to use the JSTL Tag Library's features,
 		we have to write the prefix each time to our tags.-->
@@ -27,7 +27,7 @@
 	we can reference the value of this variable in the whole page,
 	using ${root}
 	Context Path means the root of your Web App, 
-	in our case that would be http://localhost:8080/MyWebApp/ 
+	in our case that would be "http://localhost:8080/NameOfYourWebProject/"
 	THIS IS VERY IMPORTANT, BECAUSE WE DO NOT WANT TO HARDCORE ANY RELATIVE URLS,
 	imagine the Context Path / Root of our Web Application changes, if we use ABSOLUTE URLS,
 	it would be a disaster to fix-->

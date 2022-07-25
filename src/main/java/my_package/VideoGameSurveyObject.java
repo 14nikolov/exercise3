@@ -8,16 +8,21 @@ public class VideoGameSurveyObject {
 	
 	// Fields
 	
+	// Check-boxes - the fields below are required, in order to handle the Check-boxes data
+	// in our JSP Page
 	private ArrayList<String> gamesList = new ArrayList<>();
 	// Adding Validation Rule to the Field
 	// @NotBlank - can not be null, can not be empty, can not contain only white spaces 
-	
 	private ArrayList<String> gamesPlayed;
 	
+	// Radio Buttons - the fields below are required, in order to handle the Radio Buttons data
+	// in our JSP Page
 	private String[] gamesPlatform = {"PC", "Console", "Mobile"}; 
 	@NotBlank
 	private String preferredGamesPlatform;
 	
+	// Text Input Field - the field is required, in order to handle the Text Input Field data
+	// in our JSP Page
 	@NotBlank
 	private String firstVideoGameEverPlayed;
 	
@@ -38,6 +43,8 @@ public class VideoGameSurveyObject {
 	
 	// Setters and Getters
 	
+	// Check-boxes - the methods below are required, in order to handle the Check-boxes data
+	// in our JSP Page
 	public ArrayList<String> getGamesList(){
 		return gamesList;
 	}
@@ -50,24 +57,28 @@ public class VideoGameSurveyObject {
 		return gamesPlayed;
 	}
 
+	// Radio Buttons - the methods below are required, in order to handle the Radio Buttons data
+	// in our JSP Page
 	public String[] getGamesPlatform() {
 		return gamesPlatform;
-	}
-
-	public String getPreferredGamesPlatform() {
-		return preferredGamesPlatform;
 	}
 
 	public void setPreferredGamesPlatform(String preferredGamesPlatform) {
 		this.preferredGamesPlatform = preferredGamesPlatform;
 	}
-
-	public String getFirstVideoGameEverPlayed() {
-		return firstVideoGameEverPlayed;
+	
+	public String getPreferredGamesPlatform() {
+		return preferredGamesPlatform;
 	}
-
+	
+	// Text Input Field - the methods below are required, in order to handle the Text Input Field data
+	// in our JSP Page
 	public void setFirstVideoGameEverPlayed(String firstVideoGameEverPlayed) {
 		this.firstVideoGameEverPlayed = firstVideoGameEverPlayed;
+	}
+	
+	public String getFirstVideoGameEverPlayed() {
+		return firstVideoGameEverPlayed;
 	}
 	
 }
