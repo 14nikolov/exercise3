@@ -3,6 +3,7 @@ package my_package;
 import java.util.ArrayList;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 public class VideoGameSurveyObject {
 	
@@ -13,17 +14,18 @@ public class VideoGameSurveyObject {
 	private ArrayList<String> gamesList = new ArrayList<>();
 	// Adding Validation Rule to the Field
 	// @NotBlank - can not be null, can not be empty, can not contain only white spaces 
+	@NotEmpty(message="Please select atleast one of the options below")
 	private ArrayList<String> gamesPlayed;
 	
 	// Radio Buttons - the fields below are required, in order to handle the Radio Buttons data
 	// in our JSP Page
 	private String[] gamesPlatform = {"PC", "Console", "Mobile"}; 
-	@NotBlank
+	@NotBlank(message="Choosing a gaming platform is required")
 	private String preferredGamesPlatform;
 	
 	// Text Input Field - the field is required, in order to handle the Text Input Field data
 	// in our JSP Page
-	@NotBlank
+	@NotBlank(message="You need to write the first video game you have ever played")
 	private String firstVideoGameEverPlayed;
 	
 	// Constructors

@@ -1,5 +1,6 @@
 <!-- Including the JSTL Library Tag (requires "jstl-1.2.jar"), 
-	 This will allow us to perform loops and if statements in the ".jsp" file 
+	 	This will allow us to work with variables, perform loops and 
+	 	if statements in the ".jsp" file and other stuff
 	 	Take a good look at the (prefix="c"), this is very simillar to how
 		XML Namespaces and XML Schema Locations work. 
 		In order to use the JSTL Tag Library's features,
@@ -37,19 +38,29 @@
 	<!-- Using JSTL's Tag Library forEach Loop -->
 	<c:forEach var="gamesPlayed" items="${videoGameSurveyObject.gamesPlayed}">
 		<ul>
-	 		<li>
+			<!-- style attribute - allows us to style our html code -->
+	 		<li style="color:blue;">
 	 			<b><c:out value="${gamesPlayed}"/></b>
 	 		</li>
 	 	</ul>
 	</c:forEach>
 	<!-- New Line -->
 
-	2. Your preferred gaming platform is: <b>${videoGameSurveyObject.preferredGamesPlatform}</b>
+	2. Your preferred gaming platform is: 
+	<!-- New Line -->
+	<br/>
+	<!-- style attribute - allows us to style our html code -->
+	<b style="color:blue">${videoGameSurveyObject.preferredGamesPlatform}</b>
 	<!-- 2 New Lines -->
 	<br/>
 	<br/>
 	
-	3. The first video game you have ever played is: <b>${videoGameSurveyObject.firstVideoGameEverPlayed}</b>
+	
+	3. The first video game you have ever played is:
+	<!-- New Line -->
+	<br/> 
+	<!-- style attribute - allows us to style our html code -->
+	<b style="color:blue">${videoGameSurveyObject.firstVideoGameEverPlayed}</b>
 	
 </body>
 </html>

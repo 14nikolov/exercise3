@@ -37,8 +37,7 @@ public class surveysController {
 		return "video-game-survey-page";
 	}
 	
-	@RequestMapping("surveys/video-game-survey/video-game-survey-results")
-	public String getVideoGameSurveyResultsPage
+	
 	// Checking whether or not, the Model Attribute's Validation Requirements are met
 		// The Validation Requirements are given in the Object's class, via Validation Annotations 
 		// for example: @NotNull, @NotEmpty, @NotBlank, @Size and etc.
@@ -46,9 +45,12 @@ public class surveysController {
 		//
 	// BindingResult is a Spring Object, that holds the results of the Validation, 
 		// the Data Binding and it also contains errors that may have occurred.
-	// In our case we will use BindingResult's ".hasErrors()" method, to see if all of our Validation Requirements are met.
+	// In our case we will use BindingResult's ".hasErrors()" method, 
+	// to see if all of our Validation Requirements are met.
 		// If there are errors during the Validation, it will return "true",
 		// if there are no errors it will return "false" 
+	@RequestMapping("surveys/video-game-survey/video-game-survey-results")
+	public String getVideoGameSurveyResultsPage
 	(@Valid @ModelAttribute("videoGameSurveyObject") VideoGameSurveyObject theVideoGameSurveyObject,
 			BindingResult theBindingResult) 
 	{
